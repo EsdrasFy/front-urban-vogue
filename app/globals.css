@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+:root {
+  --bg-gray-login: url("/assets/bg-gray-login.jpg");
+  --logo-font: "Nanum Gothic", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  border: none;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #171a1b !important;
+}
+.shadow-snipped {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.hover-snipped {
+  transition: ease-in-out all 0.2s;
+}
+.hover-snipped:hover {
+  opacity: 0.6;
+}
+.button-snipped {
+  background-color: #dfdfdf;
+  border: 0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #3a3a3a;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 3rem;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-snipped:hover {
+  background-color: rgb(179, 179, 179);
+}
+
+.button-snipped:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-snipped:focus-visible {
+  box-shadow: none;
+}
+.beforeEffect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #ed145b, transparent);
+}
+.afterEffect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, #ed145b, transparent);
+}
+.b-bottom {
+  position: relative;
+}
+.b-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 50%;
+  transform: translateX(50%);
+  height: 2px;
+  width: 50px;
+  background-color: white;
+}
+.slaheigth {
+  min-height: 70vh;
+  max-height: 70vh;
+}
+@keyframes entrar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.soft-entry {
+  animation: entrar 2s ease-in-out;
+}
+.soft-entry2 {
+  animation: entrar 0.15s ease-in-out;
+}
+.buttonForgot {
+  background-color: #ed145c9c !important;
+  color: #fff !important;
+  transition: 0.3s ease-in-out !important;
+  padding: 0 10% !important;
+  margin-right: 12px;
+}
+.buttonForgot:hover {
+  background-color: #ed145b !important;
+}
+.cancelForgout {
+  background-color: #bbbbbb62 !important;
+  color: #fff !important;
+  transition: 0.3s ease-in-out !important;
+  padding: 0 10% !important;
+}
+.cancelForgout:hover {
+  background-color: #a0a0a0 !important;
+}
+
+.inputPin {
+  border: 2px solid #a0a0a0 !important;
+  font-size: 1.6rem !important;
+  outline: none !important;
+  color: #ed145b;
+}
+.inputPin:focus {
+  border: none !important;
+  font-size: 1.6rem !important;
+  outline: 2px solid #ed145b !important;
+  color: #ed145b;
+}
+.inputDate {
+  padding: 0 5px !important;
+  height: 52px !important;
+}
+.boxprofile {
+  position: relative !important;
+}
+.toggleProfile {
+  position: absolute !important;
+  top: 0 !important;
+  border-radius: 50%;
+  right: 0 !important;
+  max-width: 50px;
+}
+.writing {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 1.7em;
+}
+
+@media (max-width: 550px) {
+  .writing {
+    font-size: 1.3em !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .writing {
+    font-size: 1em !important;
+  }
+}
+.custom-slide {
+  min-width: 230.5px;
+  max-width: 230.5px;
+  overflow: hidden;
+  min-height: 385px;
+  max-height: 385px;
+  object-fit: cover;
+}
+.swiper-wrapper {
+  display: flex;
+  max-width: 970px;
+}
+.gamb {
+  min-width: 100vw;
+}
+.bordernav {
+  border-bottom: 1px solid transparent;
+  transition: 400ms ease-in-out;
+}
+.bordernav:hover {
+  border-bottom: 1px solid #d1d5db;
+  color: #ed145b;
+}
+.imageSlide {
+  max-height: 80% !important;
+}
+.heart{
+  position: absolute;
+  background: url("assets/img1.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  transform: translate(-50%,-50%);
+}
+.heartActived{
+  background-position: right;
+  animation: animateHeart .8s steps(28) 1;
+}
+@keyframes animateHeart {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+  
+}
+select:not([size]) {
+  background: none !important;
+}
+@media (max-width: 1100px) {
+  .next-prev {
+    display: none;
+  }
+}
